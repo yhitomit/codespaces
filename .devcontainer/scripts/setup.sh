@@ -21,11 +21,6 @@ else
 	export SITE_HOST="https://${CODESPACE_NAME}-443.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
 fi
 
-# Update the CODESPACES-WELCOME-MESSAGE.md file with the Codespace URL but first Ignore those changes in Git 📩
-git update-index --assume-unchanged $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md
-sed -i "s|{insert-codespace-url-here}|$SITE_HOST|" $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md && \
-sed -i "s|{insert-github-repo-url-here}|$GITHUB_SERVER_URL/$GITHUB_REPOSITORY|" $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md
-
 # =====================================================================================================================================
 # Wait for MySQL connection 🔌
 LOCAL_DB_HOST=$PROJECT_NAME"_db";

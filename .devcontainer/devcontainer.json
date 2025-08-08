@@ -20,7 +20,7 @@
 	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
 	"postStartCommand": "",
 	"waitFor": "postStartCommand",
-	"postAttachCommand" : "/bin/bash .devcontainer/scripts/welcome-message.sh",
+	"postAttachCommand" : "",
 	 "forwardPorts": [
 		80,
 		443,
