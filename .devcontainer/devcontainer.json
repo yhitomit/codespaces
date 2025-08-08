@@ -90,13 +90,6 @@
 			}
 		},
 	"codespaces": {
-		"repositories": {
-			"builtmighty/.devcontainer": {
-				"permissions": {
-					"contents": "write"
-				}
-			}
-		}
 		}
 	}
 }
