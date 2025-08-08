@@ -24,7 +24,6 @@ fi
 # Update the CODESPACES-WELCOME-MESSAGE.md file with the Codespace URL but first Ignore those changes in Git 📩
 git update-index --assume-unchanged $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md
 sed -i "s|{insert-codespace-url-here}|$SITE_HOST|" $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md && \
-sed -i "s|{insert-mail-catcher-url-here}|http://127.0.0.1:8025|" $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md
 sed -i "s|{insert-github-repo-url-here}|$GITHUB_SERVER_URL/$GITHUB_REPOSITORY|" $DOCUMENT_ROOT/.devcontainer/CODESPACES-WELCOME-MESSAGE.md
 
 # =====================================================================================================================================
@@ -36,11 +35,6 @@ while ! mysqladmin ping -h "$LOCAL_DB_HOST" -u "root" -p"$MYSQL_ROOT_PASSWORD" >
 done
 echo "MySQL connection is successful ✅. Checking custom configurations.. \n"
 docker exec -it tugboat_db mysqld --validate-config
-
-# =====================================================================================================================================
-# Install MailPit 📧
-curl -sSL https://raw.githubusercontent.com/axllent/mailpit/develop/install.sh | sudo bash
-# =====================================================================================================================================
 
 # =====================================================================================================================================\
 # Mark DOCUMENT_ROOT and WEB_ROOT as Safe Directories for .git to access 🧑‍💻
