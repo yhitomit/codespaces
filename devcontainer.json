@@ -1,0 +1,108 @@
+{
+	"hostRequirements": {
+		"cpus": 4
+	},
+	"name": "Codespaces",
+	"dockerComposeFile": "docker-compose.yml",
+	"remoteEnv": {
+		"HOST_PROJECT_PATH": "/workspaces/${localWorkspaceFolderBasename}",
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	"service": "web",
+	"workspaceFolder": "/var/www/html",
+	"runServices": ["web", "db", "redis"],
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"initializeCommand": "mkdir -p .devcontainer/var/log/mysql .devcontainer/scripts/build-files .devcontainer/var/log/apache2 && touch .devcontainer/config/php/php.ini .devcontainer/config/ssh/sshd_config .devcontainer/config/mysql/my.cnf && chmod 644 .devcontainer/config/mysql/my.cnf",
+	"onCreateCommand": "",
+	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
+	"postStartCommand": "",
+	"waitFor": "postStartCommand",
+	"postAttachCommand" : "/bin/bash .devcontainer/scripts/start-mailpit-service.sh && /bin/bash .devcontainer/scripts/welcome-message.sh",
+	 "forwardPorts": [
+		80,
+		443,
+		8080,
+		3306,
+		6379,
+		8025,
+		1025
+	],
+	"portsAttributes": {
+		"443": {
+			"label": "Website - HTTPS",
+			"onAutoForward": "openBrowser",
+			"elevateIfNeeded": true,
+			"protocol": "https"
+		},
+		"80": {
+			"label": "HTTP",
+			"protocol": "http"
+		},
+		"3306": {
+			"label": "MySQL DB"
+		},
+		"6379": {
+			"label": "Redis"
+		},
+		"8025": {
+			"label": "MailPit - WEB UI"
+		},
+		"1025": {
+			"label": "MailPit - SMTP"
+		}
+	 },
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"DEVSENSE.phptools-vscode",
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens",
+				"donjayamanne.githistory",
+				"johnbillion.vscode-wordpress-hooks",
+				"ms-vscode-remote.remote-containers",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"BuiltMighty.builtmighty-commit",
+				"cweijan.vscode-mysql-client2",
+				"ms-vsliveshare.vsliveshare"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.shell.linux": "/bin/zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+					"path": "/bin/zsh"
+					}
+				},
+				"files.eol": "\n",
+				"editor.bracketPairColorization.enabled": true,
+				"editor.guides.bracketPairs": "active",
+				"editor.errorLens.enabled": true,
+				"editor.folding": true,
+				"editor.foldingStrategy": "auto",
+				"editor.quickSuggestions": {
+					"other": true,
+					"comments": true,
+					"strings": true
+				},
+				"github.codespaces.showPerformanceExplorer": true,
+				"workbench.editorAssociations": {
+					"*.md": "vscode.markdown.preview.editor"
+				}
+			}
+		},
+	"codespaces": {
+		"repositories": {
+			"builtmighty/.devcontainer": {
+				"permissions": {
+					"contents": "write"
+				}
+			}
+		}
+		}
+	}
+}
