@@ -34,7 +34,7 @@ while ! mysqladmin ping -h "$LOCAL_DB_HOST" -u "root" -p"$MYSQL_ROOT_PASSWORD" >
     sleep 2
 done
 echo "MySQL connection is successful ✅. Checking custom configurations.. \n"
-docker exec -it tugboat_db mysqld --validate-config
+docker exec -it codespaces_db mysqld --validate-config
 
 # =====================================================================================================================================\
 # Mark DOCUMENT_ROOT and WEB_ROOT as Safe Directories for .git to access 🧑‍💻
