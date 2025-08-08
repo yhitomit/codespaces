@@ -20,7 +20,7 @@
 	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
 	"postStartCommand": "",
 	"waitFor": "postStartCommand",
-	"postAttachCommand" : "/bin/bash .devcontainer/scripts/start-mailpit-service.sh && /bin/bash .devcontainer/scripts/welcome-message.sh",
+	"postAttachCommand" : "/bin/bash .devcontainer/scripts/welcome-message.sh",
 	 "forwardPorts": [
 		80,
 		443,
@@ -46,12 +46,6 @@
 		},
 		"6379": {
 			"label": "Redis"
-		},
-		"8025": {
-			"label": "MailPit - WEB UI"
-		},
-		"1025": {
-			"label": "MailPit - SMTP"
 		}
 	 },
 	"customizations": {
