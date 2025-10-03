@@ -54,8 +54,8 @@
     </body>
     <style>
         body {
-            background: #202124;
-            color: #fff;
+            background: #2fbb2a94;
+            color: #ffffff54;
             font-family: "Host Grotesk", sans-serif;
             margin: 0;
             font-size: 16px;
@@ -97,7 +97,7 @@
             -moz-transition: all 0.3s ease;
         }
         #header a.header-icon:hover {
-            background: #4d5156;
+            background: #564d4d69;
         }
         #header a.header-icon svg path {
             fill: #fff;
