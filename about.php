@@ -15,15 +15,14 @@
             <a href="/"><img src="/assets/codespaces.png" /></a>
             <div class="about__container">
                 <div class="about__left">
-                    <img src="/assets/default.jpg" />
+                    <img src="/assets/Image.jpg" />
                 </div>
                 <div class="about__right">
-                    <h1>About Me</h1>
-                    <h3 class="about-name">My Name</h3>
+                    <h1>About Timothy</h1>
+                    <h3 class="about-name">Timothy Mathews</h3>
                     <p>Welcome to my about page! Here you can find more information about my background, skills, and interests.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut sem eu libero finibus scelerisque a vel nulla. Donec venenatis magna justo, at fringilla sapien convallis in. Suspendisse dapibus est sit amet mollis gravida. Aliquam vulputate purus id magna semper elementum. Praesent at faucibus quam, eget convallis risus. In eget magna semper nunc blandit elementum eget sed tellus. Sed a pulvinar sapien. Aenean vulputate enim vel finibus scelerisque. Vivamus vestibulum, risus non scelerisque hendrerit, diam magna efficitur dui, in rhoncus lorem arcu sed quam. Donec viverra arcu vel dapibus condimentum. Sed mattis placerat nulla, sit amet malesuada nisi molestie a. Nulla malesuada euismod massa id scelerisque. Morbi nec lectus ligula. Mauris sed sapien quis eros aliquet fringilla id ut felis. Sed eget condimentum leo. Morbi congue sapien eget iaculis pellentesque.</p>
-                    <p>Curabitur pellentesque pellentesque arcu, ac suscipit risus maximus at. Ut sed leo sit amet ante laoreet finibus non et neque. Nam ornare orci nisl, vel sagittis turpis laoreet eget. Nulla bibendum nunc vitae metus posuere, sit amet varius purus porttitor. Pellentesque dapibus dolor in feugiat suscipit. Donec commodo mattis tellus sed imperdiet. Maecenas a tempus ex. Donec aliquet lacus sed metus pellentesque tincidunt. Duis fringilla urna tortor, nec vulputate lacus facilisis sit amet. Mauris quis dui vitae arcu pulvinar elementum. Morbi sit amet nisl sit amet leo gravida elementum sed sit amet odio. Nulla facilisi. Quisque fringilla ornare nunc, vel volutpat erat ultricies non. Suspendisse posuere, tellus id volutpat facilisis, urna odio mollis nisi, quis rhoncus est ex ac lectus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                    <div class="about__socials"><?php
+                    <p>My name is Timothy Mathews and I am currently taking a computer sciennce class. We are currently entering into the fall, which is one of my favorite seasons. In the fall Pulaski Rec forms a fourteen to seventeen soccer league of which i am a part. Up until a few weeks ago my Parents had to drive me to the soccer fields, but now i can drive myself as I aquired my license on the twenty-eigth of september. Driving is enjoyable, but the first time i was in the car by myself there was an erie quiet. I had never not been with someone else in the car. Now it is October. People often poke fun at me and my brother, because we almost always wear shorts, even into November. For some reason my legs just don't get cold. Maybe its becasue I'm part asian. Though i do have some asian blood in me, I am mostly white, but this doesn't stop my friends, especially Tucker, from joking with me. I like the jokes. I think being part asian is pretty cool. The final thing i would like to say is no, I don't eat dogs. My Favortie band is Sabaton.</p>
+                    <p><iframe width="499" height="887" src="https://www.youtube.com/embed/APaeZtbeTKs" title="🇦🇺 🇳🇿 To all of our friends in Aus + NZ! It was an absolute pleasure playing for you! 🙏" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
                         // Set socials.
                         $socials = [
@@ -41,7 +40,7 @@
                                 <img src="/assets/<?php echo $social_id; ?>.svg" />
                             </a><?php
 
-                        } ?>
+                        }?>
 
                     </div>
                 </div>
