@@ -7,20 +7,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/youtube.css?ver=<?php date('His'); ?>" media="all" />
+        <link rel="stylesheet" href="/assets/youtube.css?ver=<?php echo date('YmdHis'); ?>" media="all" />
     </head>
     <body>
         <!-- Get started here -->
          <div id="header">
             <div class="header-inner header-left">
                 <button id="hamburger">
-                    <img src="/assets/hamburger.svg"/>
+                   <?php include dirname(__FILE__) . '/assets/hamburger.svg'; ?>
                 </button>
                 <img id="logo" src="/assets/youtube.svg" />
             </div>
             <div class="header-inner header-center">
-                <form method="post" id="search">
-                    <input type="text" name="search" placeholders="Search" />
+                <form method="GET" id="search" action="https://www.youtube.com/results">
+                    <input type="text" name="search_query" placeholders="Search" />
                     <input type="submit" value="Search" />
                 </form>
                 <button id="voice-search">
