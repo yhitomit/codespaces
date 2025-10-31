@@ -1,7 +1,7 @@
 /* youtube.css */
 body,
 #header {
-    color : #fff;
+    color : #ffffff;
     background : #0f0f0f;
 }
 
@@ -15,6 +15,17 @@ button#hamburger {
     border: none;
     padding: 5px;
     border-radius: 100%;
+    margin-right: 15px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+button#hamburger:hover {
+    background:#272727;
+    cursor:pointer;
 }
 
 button#hamburger svg {
@@ -43,4 +54,20 @@ button#hamburger svg path {
 
 .header-right {
     justify-content: flex-end;
+}
+
+form#search {
+    background: #121212;
+    border: 1px solid #ffffff20;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+form#search input[type=text]{
+    padding: 10px;
+    min-width: 250px;
+}
+
+form#search input[type=submit]{
+    padding:10px
 }
