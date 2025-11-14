@@ -16,7 +16,7 @@
                 <button id="hamburger">
                    <?php include dirname(__FILE__) . '/assets/hamburger.svg'; ?>
                 </button>
-                <img id="logo" src="/assets/youtube.svg" />
+                <img id="logo" src="/assets/youtube.svg"?ver=<?php echo date ('YmdHis'); ?>" />
             </div>
             <div class="header-inner header-center">
                 <form method="GET" id="search" action="https://www.youtube.com/results">
