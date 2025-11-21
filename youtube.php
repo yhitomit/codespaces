@@ -29,10 +29,10 @@
             </div>
             <div class="header-inner header-right">
                   <button id="settings">
-                    <img src="/assets/vertical-dots.svg">
+                    <?php include dirname(__FILE__) . '/assets/vertical-dots.svg'; ?>
                 </button> 
                 <button id="user">
-                    <img src="/assets/user.svg"/>
+                    <?php include dirname(__FILE__) . '/assets/user.svg'; ?>
                     <span>Sign In</span>
                 </button>
             </div>

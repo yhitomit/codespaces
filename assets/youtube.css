@@ -8,6 +8,7 @@ body,
 #header {
     display: grid;
     grid: auto-flow dense / 1fr 2fr 1fr;
+    padding: 0 16px;
 }
 
 button#hamburger {
@@ -108,8 +109,37 @@ button#voice-search {
     justify-content: center;
 }
 
-button#voice-search img {
+button#voice-search img,
+button#settings svg {
     width: 24px;
     height: 24px;
     dispaly: block;
+}
+
+button#settings {
+    background: none;
+    border: none; 
+    margin-right: 10px;
+}
+
+button#settings svg path,
+button#user svg path {
+    fill: #ffffff; 
+}
+
+button#user {
+    background: none;
+    border: 1px solid rgba(255,255,255, 0.2);
+    border-radius: 25px; 
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    width: 100px;
+}
+
+button#user svg {
+    width: 24px;
+    height: 24px;
 }
