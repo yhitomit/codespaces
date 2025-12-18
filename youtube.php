@@ -24,7 +24,7 @@
                     <input type="submit" value="Search" />
                 </form>
                 <button id="voice-search">
-                    <img src="/assets/microphone.svg">
+                    <?php include dirname(__FILE__) . '/assets/microphone.svg'; ?>
                 </button> 
             </div>
             <div class="header-inner header-right">
@@ -37,6 +37,60 @@
                 </button>
             </div>
          </div>
+         <div id="content">
+            <div id="side-menu"><?php
+
+                    // Menu array. 
+                    $menu_array = [
+                        'menu' => [
+                            '/'                 => 'Home',
+                            '/shorts/'          => 'Shorts',
+                            
+                        ],
+                        'Subscriptions' => [
+                            '1'                 => 'Channel 1',
+                            '2'                 => 'Channel 2',
+                            '3'                 => 'Channel 3',
+                            '4'                 => 'Channel 4',
+                            '5'                 => 'Channel 5'
+                        ],
+                        'You'           => [
+                            '/history'          => 'History',
+                            '/playlist'         => 'Playlist',
+                            '/watch-later'      => 'Watch Later',
+                            '/liked'            => 'Liked Videos',
+                            '/your-videos'      => 'Your Videos',
+                            '/downloads'        => 'Downloads'
+                        ],
+                        'explore'       => [
+                            '/shopping'         => 'Shopping',
+                            '/music'            => 'Music',
+                            '/movie-tv'         => 'Movie & Tv',
+                        ],
+                        'account'       => [
+                            '/settings'         => 'Settings',
+                            '/report'           => 'Report',
+                            '/help'             => 'Help',
+                            '/feedback'         => 'Send Feedback',
+
+                        ],
+                    ];
+                    
+                    // Menu loop.
+                    foreeach( $menu_array as $section => $menu_items ) {
+
+                        // Output section.?>
+                        <div class="menu-section menu-section-<php echo $section; ?>">
+
+                    }
+                    ?>
+
+
+
+            </div>
+            <div id="main-content">
+            </div>
+        </div>
         <!-- https://picsum.photos/530/300 -->
     </body>
 </html>
