@@ -1,10 +1,12 @@
 /* youtube.css */
 body,
 #header {
-    color : #ffffff;
-    background : #0f0f0f;
+    color: #ffffff;
+    background: #0f0f0f;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Header */
 #header {
     display: grid;
     grid: auto-flow dense / 1fr 2fr 1fr;
@@ -144,4 +146,73 @@ button#user svg,
 button#voice-search svg {
     width: 24px;
     height: 24px;
+}
+
+/* Content */
+#content {
+    display: flex;
+    grid-gap: 24px;
+}
+#content > * {
+    flex: 1
+}
+
+#side-menu {
+    max-width: 240px; 
+}
+#side-menu .menu-section {
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    padding: 15px 0;
+}
+
+#side-menu .menu-section:last-child {
+    border-bottom: 0;
+}
+
+#side-menu .menu-section .menu-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 10px;
+}
+
+#side-menu .menu-section .menu-item a:hover {
+    background:  rgba(255,255,255, 0.2);
+}
+
+#category-filter {
+    display: flex;
+    grid-gap: 10px;
+    padding: 24px 0;
+}
+
+#category-filter a {
+    color: #fff;
+    background: rgba(255,255,255, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+#video-content {
+    display: grid;
+    grid-gap: 15px;
+    grid: auto-flow dense / 1fr 1fr 1fr;
+    margin-right: 10px;
+}
+
+#video-content .video-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#video-content .video-item h3 {
+    margin: 10px 0 0;
+}
+
+#video-content .video-item p {
+    margin: 7.5px 0;
+    font-size: 14px;
+    opacity: 0.6;
 }

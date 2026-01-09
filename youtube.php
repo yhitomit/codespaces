@@ -77,18 +77,93 @@
                     ];
                     
                     // Menu loop.
-                    foreeach( $menu_array as $section => $menu_items ) {
+                    foreach( $menu_array as $section => $menu_items ) {
 
                         // Output section.?>
-                        <div class="menu-section menu-section-<php echo $section; ?>">
+                        <div class="menu-section menu-section-<php echo $section; ?>"><?php
 
-                    }
-                    ?>
+                        // Menu item loop
+                        foreach($menu_items as $url => $label) {
+                            
+                            // Output. ?>
+                            <div class="menu-item menu-item-section-<?php echo $section; ?> menu-item-<?php echo str_replace('/', '', $url);?>">
+                                <a href="<?php echo $url; ?>"><?php echo $label; ?></a>
+                            </div><?php
+                            
+                        } ?>
+
+                    </div><?php
+
+                    } ?>
 
 
 
             </div>
             <div id="main-content">
+                <div id="category-filter"><?php
+
+                // Category array.
+                $categories = [
+                    'All',
+                    'Podcast',
+                    'Gaming',
+                    'Reaction Videos',
+                    'Music',
+                    'Mixes',
+                    'Esports',
+                    'Live',
+                ]; 
+                
+                
+                // Loop through categories.
+                foreach($categories as $category) {
+
+                    //Output category. ?>
+                    <a href="<?php echo '/' . urlencode(strtolower( $category )); ?>">
+                        <?php echo $category; ?>
+                    </a><?php 
+                }?>
+
+                </div>
+                <div id="video-content"><?php
+
+
+                    // Title array.
+                    $titles = [
+                             'How to Build a House',
+                            'Best Deck for Clash Royale',
+                            'Root: Corvid Gameplay',
+                            'Backyard Ducks',
+                            'Georgia vs. Ole Miss',
+                            'Dude perfect: Overtime 68',
+                            'Charlie Kirk Debuncts Leftist: Again!',
+                            'Band of Brothers',
+                        
+                    ]; 
+                    
+                    // Videos.
+                    $videos = range(0,8);
+
+                    // Loop through videos.
+                    foreach( $videos as $video ) {
+
+                        // Random title.
+                        $title = $titles[rand(0,8 )];
+
+                        // Output. ?>
+                        <div id="video-<?php echo $video; ?>" class="video-item">
+                            <div class="video-item-image">
+                                <img src="https://picsum.photos/id/<?php echo rand( 0, 20); ?>/530/300"/>
+                            </div>
+                            <div class="video-item-text">
+                                <h3><?php echo $title; ?></h3>
+                                <p>Channel <?php echo rand(1,500); ?></p>
+                                <p><?php echo rand(1,9); ?> hours ago</p>
+                            </div>
+                        </div><?php
+                    } ?>
+
+                </div>
             </div>
         </div>
         <!-- https://picsum.photos/530/300 -->
